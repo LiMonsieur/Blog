@@ -10,6 +10,9 @@ class Article(models.Model) :
     date_time = models.DateTimeField(auto_now_add = True)  #博客日期
     content = models.TextField(blank = True, null = True)  #博客文章正文
 
+
+
+
     #python2使用__unicode__, python3使用__str__
     def __str__(self) :
         return self.title

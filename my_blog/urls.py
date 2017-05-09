@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 """my_blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -18,6 +19,7 @@ from django.contrib import admin
 from article import views
 
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home , name = 'home'),
@@ -25,6 +27,7 @@ urlpatterns = [
     url(r'^archives/$', views.archives, name = 'archives'),
     url(r'^aboutme/$', views.about_me, name = 'about_me'),
     url(r'^tag(?P<tag>\w+)/$',views.search_tag, name = 'search_tag'),
+    url(r'^search/$',views.blog_search, name = 'search'),
     url(r'^sj', views.sj),
     url(r'^index/$', views.index),
 
