@@ -17,6 +17,8 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from article import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 
@@ -31,4 +33,4 @@ urlpatterns = [
     url(r'^sj', views.sj),
     url(r'^index/$', views.index),
 
-]
+]+ static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)

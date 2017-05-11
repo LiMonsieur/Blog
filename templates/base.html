@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="http://labfile.oss.aliyuncs.com/courses/487/grids-responsive-min.css">
     <link rel="stylesheet" href="http://labfile.oss.aliyuncs.com/courses/487/blog.css">
     <link rel="stylesheet" href="http://labfile.oss.aliyuncs.com/courses/487/monokai.css">
+    <!-- {%load static %} -->
 
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="/templates/bitbug_favicon.ico" /> -->
 
+    <!-- icon -->
+    <link type="image/x-icon" rel="shortcut icon" href="/static/images/easyicon.ico" />
 </head>
 <body>
 <div id="layout" class="pure-g">
@@ -22,6 +24,14 @@
             <h1 class="brand-title"><a href="{% url "home" %}">Li Monsieur Blog</a></h1>
             <h2 class="brand-tagline"></h2>
             <nav class="nav">
+                    <!-- 头像 -->
+                    <li class="nav-item">
+                        <img src="/static/images/timg.jpg" alt = 'My image' title = "love&peace~"/>
+                        <!-- <img src="/static/images/easyicon.ico" alt = 'My image' title = "love&peace~"/> -->
+                    </li>
+
+
+
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a class="button-success pure-button" href="/">首页</a>
@@ -44,12 +54,11 @@
 
                     
                     <li class="nav-item">
-
-
                     <form class="pure-form" action="/search/" method="get">
                     <input class="pure-input-3-3" type="text" name="s" placeholder="搜全站">
                     </form>
                     </li>
+
                 </ul>
             </nav>
         </div>
